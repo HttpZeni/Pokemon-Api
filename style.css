@@ -32,7 +32,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 125%;
     background-color: transparent;
 }
 
@@ -61,6 +61,7 @@ body {
 .card-hidden{
     display: none;
     position: absolute;
+    overflow: hidden;
 
     width: 405px;
 
