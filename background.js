@@ -9,12 +9,12 @@ function resize() {
   canvas.height = window.innerHeight * dpr;
   canvas.style.width = window.innerWidth + 'px';
   canvas.style.height = window.innerHeight + 'px';
-  ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset any transforms
+  ctx.setTransform(1, 0, 0, 1, 0, 0); 
   ctx.scale(dpr, dpr);
 }
 
 export function setParticlesWithPokemonImage(src) {
-  particles.length = 0; // Alle Partikel löschen
+  particles.length = 0;
   const img = new Image();
   img.src = src;
   img.onload = () => {
@@ -55,7 +55,6 @@ const particles = [];
 const images = [];
 const NUM_PARTICLES = 50;
 
-// Bilder laden und starten, wenn fertig
 let loadedCount = 0;
 imageSources.forEach(src => {
   const img = new Image();
@@ -86,7 +85,6 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-// Funktion, um dynamisch Pokémon-Bild als Partikel hinzuzufügen
 export function addParticleImage(src) {
   const img = new Image();
   img.src = src;
